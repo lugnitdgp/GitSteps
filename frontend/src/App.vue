@@ -5,7 +5,7 @@
       app
     >
       <v-list dense>
-        <v-list-item>
+        <v-list-item @click="$router.push({ path: '/' })">
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -13,7 +13,7 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="$router.push({ path: '/register' })">
           <v-list-item-action>
             <v-icon>mdi-account-plus</v-icon>
           </v-list-item-action>
@@ -21,7 +21,7 @@
             <v-list-item-title>Register</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="$router.push({ path: '/schedule' })">
           <v-list-item-action>
             <v-icon>mdi-calendar</v-icon>
           </v-list-item-action>
@@ -29,7 +29,7 @@
             <v-list-item-title>Schedule</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="$router.push({ path: '/prizes-and-rewards' })">
           <v-list-item-action>
             <v-icon>mdi-trophy</v-icon>
           </v-list-item-action>
@@ -37,7 +37,7 @@
             <v-list-item-title>Prizes and Rewards</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="$router.push({ path: '/faq' })">
           <v-list-item-action>
             <v-icon>mdi-help-circle</v-icon>
           </v-list-item-action>
@@ -45,7 +45,7 @@
             <v-list-item-title>FAQ</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="$router.push({ path: '/contact' })">
           <v-list-item-action>
             <v-icon>mdi-mail</v-icon>
           </v-list-item-action>
@@ -66,18 +66,9 @@
     </v-app-bar>
 
     <v-content>
-      <v-container
-        fluid
-        fill-height
-      >
-        <v-layout
-          align-center
-          justify-center
-        >
-          <v-flex text-center></v-flex>
-        </v-layout>
-      </v-container>
+      <router-view/>
     </v-content>
+
     <v-footer
       color="indigo"
       app
